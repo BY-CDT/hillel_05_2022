@@ -1,6 +1,0 @@
-git clone
-git commit
-git pull
-git push
-git merge
-git add
