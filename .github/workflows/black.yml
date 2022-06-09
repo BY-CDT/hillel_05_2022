@@ -1,4 +1,4 @@
-ame: Lint
+Name: Lint
 
 on: [push, pull_request]
 
