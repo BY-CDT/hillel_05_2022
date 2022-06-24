@@ -1,4 +1,3 @@
-
 team: list[dict] = [
     {"name": "John", "age": 20, "number": 1},
     {"name": "Mark", "age": 33, "number": 3},
@@ -27,8 +26,10 @@ def add_player(num: int, name: str, age: int) -> None:
         team.append(player)
         log(message=f"Adding {player['name']}")
     else:
-        print(f"\nThere is already a player with {num} number. "
-              f"Duplicate numbers are not allowed.\n")
+        print(
+            f"\nThere is already a player with {num} number. "
+            f"Duplicate numbers are not allowed.\n"
+        )
 
 
 def remove_player(players: list[dict], num: int) -> None:
