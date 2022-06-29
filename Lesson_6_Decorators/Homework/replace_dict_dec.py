@@ -5,7 +5,7 @@ def mask_data(target_key: str, replace_with: str = "*"):
     def decorator(func):
         def wrapper(*args, **kwargs):
             result = func(*args, **kwargs)
-            result.update({target_key: "*"})
+            result.update({target_key: replace_with})
             return result
 
         return wrapper
