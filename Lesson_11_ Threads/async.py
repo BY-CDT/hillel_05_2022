@@ -16,9 +16,7 @@ async def get_primes_amount(num: int):
 
 
 async def no_lock(num):
-    print(f"No_lock started {num}")
     await get_primes_amount(num)
-    print(f"No_lock end {num}")
 
 
 numbers = [40000, 40, 5, 1, 40000, 700]
