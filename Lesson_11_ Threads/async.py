@@ -13,22 +13,17 @@ async def get_primes_amount(num: int) -> None:
                 break
         if counter < 3:
             results += 1
+            await asyncio.sleep(0.1)
     print(f"There are {results} prime numbers in {num}.")
 
 
-async def no_lock(num: int) -> None:
-    """Calls asynchronously the get_primes_amount function. Allows multiple function calls to be executed
-    asynchronously."""
-    await get_primes_amount(num)
-
-
-numbers = [40000, 40, 5, 1, 40000, 700]
+numbers = [40000, 40, 5, 1, 4000, 700]
 
 
 def main():
     """Creating an event loop for the asynchronous execution. Feeds the provided list of numbers to the functions in
     order to get the count of prime numbers for each number provided from the list."""
-    task = [no_lock(num) for num in sorted(numbers)]
+    task = [get_primes_amount(num) for num in numbers]
     event_loop = asyncio.get_event_loop()
     event_loop.run_until_complete(asyncio.gather(*task))
     event_loop.close()
