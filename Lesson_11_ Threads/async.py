@@ -13,11 +13,11 @@ async def get_primes_amount(num: int) -> None:
                 break
         if counter < 3:
             results += 1
-            await asyncio.sleep(0.1)
+            # await asyncio.sleep(0.1)
     print(f"There are {results} prime numbers in {num}.")
 
 
-numbers = [40000, 40, 5, 1, 4000, 700]
+numbers = [1, 40000, 40, 5, 1, 4000, 700]
 
 
 def main():
